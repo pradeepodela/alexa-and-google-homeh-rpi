@@ -1,0 +1,233 @@
+[
+    {
+        "id": "4578f830.f3e108",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d6502bc9.bbade8",
+        "type": "rpi-gpio out",
+        "z": "4578f830.f3e108",
+        "name": "",
+        "pin": "8",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 310,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "a1224cea.a2a0a",
+        "type": "alexa-home",
+        "z": "4578f830.f3e108",
+        "conf": "da2218d3.f7c588",
+        "device": "140875",
+        "acknoledge": true,
+        "name": "light1",
+        "topic": "true",
+        "x": 180,
+        "y": 520,
+        "wires": [
+            [
+                "d6502bc9.bbade8"
+            ]
+        ]
+    },
+    {
+        "id": "af27c0c2.401",
+        "type": "rpi-gpio out",
+        "z": "4578f830.f3e108",
+        "name": "",
+        "pin": "10",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 340,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d281ec36.11cce",
+        "type": "rpi-gpio out",
+        "z": "4578f830.f3e108",
+        "name": "",
+        "pin": "12",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 340,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "850957f1.d98268",
+        "type": "rpi-gpio out",
+        "z": "4578f830.f3e108",
+        "name": "",
+        "pin": "11",
+        "set": "",
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "x": 360,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "27669d49.1bb312",
+        "type": "alexa-home",
+        "z": "4578f830.f3e108",
+        "conf": "da2218d3.f7c588",
+        "device": "140877",
+        "acknoledge": true,
+        "name": "light2",
+        "topic": "",
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "af27c0c2.401"
+            ]
+        ]
+    },
+    {
+        "id": "8340c619.2038c8",
+        "type": "alexa-home",
+        "z": "4578f830.f3e108",
+        "conf": "da2218d3.f7c588",
+        "device": "140879",
+        "acknoledge": true,
+        "name": "led3",
+        "topic": "",
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "d281ec36.11cce"
+            ]
+        ]
+    },
+    {
+        "id": "f7c4f109.3b7f6",
+        "type": "alexa-home",
+        "z": "4578f830.f3e108",
+        "conf": "da2218d3.f7c588",
+        "device": "140881",
+        "acknoledge": true,
+        "name": "led4",
+        "topic": "",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "850957f1.d98268"
+            ]
+        ]
+    },
+    {
+        "id": "3557a3fd.6183bc",
+        "type": "nora-switch",
+        "z": "4578f830.f3e108",
+        "devicename": "led1",
+        "roomhint": "",
+        "name": "",
+        "passthru": true,
+        "nora": "881ec52b.ce0348",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "d6502bc9.bbade8"
+            ]
+        ]
+    },
+    {
+        "id": "faceefe8.ae639",
+        "type": "nora-switch",
+        "z": "4578f830.f3e108",
+        "devicename": "led2",
+        "roomhint": "",
+        "name": "",
+        "passthru": false,
+        "nora": "881ec52b.ce0348",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "af27c0c2.401"
+            ]
+        ]
+    },
+    {
+        "id": "369c19b0.8afc76",
+        "type": "nora-switch",
+        "z": "4578f830.f3e108",
+        "devicename": "led3",
+        "roomhint": "",
+        "name": "",
+        "passthru": false,
+        "nora": "881ec52b.ce0348",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "d281ec36.11cce"
+            ]
+        ]
+    },
+    {
+        "id": "afb12b1f.bb06c8",
+        "type": "nora-switch",
+        "z": "4578f830.f3e108",
+        "devicename": "led4",
+        "roomhint": "",
+        "name": "",
+        "passthru": false,
+        "nora": "881ec52b.ce0348",
+        "topic": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "850957f1.d98268"
+            ]
+        ]
+    },
+    {
+        "id": "da2218d3.f7c588",
+        "type": "alexa-home-conf",
+        "username": "Pradeep"
+    },
+    {
+        "id": "881ec52b.ce0348",
+        "type": "nora-config",
+        "name": "nora config",
+        "group": "",
+        "notify": true
+    }
+]
